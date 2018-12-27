@@ -1,13 +1,13 @@
 name:                playground
 version:             0.1.0.0
 github:              "githubuser/playground"
-license:             BSD3
-author:              "Author name here"
-maintainer:          "example@example.com"
-copyright:           "2018 Author name here"
+license:             MIT
+author:              "Jan Nils Ferner"
+maintainer:          "jn_ferner@hotmail.de"
+copyright:           "2018 Jan Nils Ferner"
 
 extra-source-files:
-- README.md
+- readme.md
 - ChangeLog.md
 
 # Metadata used when publishing your package
