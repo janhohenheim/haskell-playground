@@ -8,7 +8,12 @@ import Data.Char
 import qualified Data.Map as Map
 
 someFunc :: IO ()
-someFunc = putStrLn $ show $ caesarEncode 4 "Hi there!"
+someFunc = 
+    let phoneMap = Map.fromList phoneNumbers
+        someNumber = case Map.lookup "betty" phoneMap of
+            Just number -> "The number is" ++ number
+            Nothing -> "No number found"
+    in  putStrLn $ show $ someNumber
 
 quicksort :: (Ord a) => [a] -> [a]
 quicksort [] = []
@@ -37,3 +42,6 @@ caesarEncode shift msg =
     let ords = map ord msg
         shifted = map (+ shift) ords
     in map chr shifted
+
+phoneNumbers :: [(String, String)]
+phoneNumbers = [("betty","555-2938"),("bonnie","452-2928"),("lucille","205-2928")]
