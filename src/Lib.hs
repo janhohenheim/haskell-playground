@@ -17,3 +17,6 @@ howManyElementsDoesItTakeForTheSumOfTheRootsOfAllNaturalNumbersToExceedANumber x
 
 makeAllNegative :: (Num a) => [a] -> [a]
 makeAllNegative = map $ negate . abs
+
+boomBangs :: (Integral a) => [a] -> [String]
+boomBangs xs = [ if x < 10 then "BOOM!" else "BANG!" | x <- xs, odd x] 
