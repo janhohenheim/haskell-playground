@@ -13,7 +13,7 @@ import Geometry.Shape
 
 someFunc :: IO ()
 someFunc = 
-    let shape = Circle 1 2 3
+    let shape = Circle (Point 1 2) 3
     in  putStrLn $ show $ shape
 
 quicksort :: (Ord a) => [a] -> [a]
