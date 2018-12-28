@@ -3,7 +3,7 @@ module Lib
     ) where
 
 someFunc :: IO ()
-someFunc = putStrLn $ show $ howManyElementsDoesItTakeForTheSumOfTheRootsOfAllNaturalNumbersToExceedANumber 1000
+someFunc = putStrLn $ show $ makeAllNegative [1, 2, 2 ,3 ,4]
 
 quicksort :: (Ord a) => [a] -> [a]
 quicksort [] = []
@@ -14,3 +14,6 @@ quicksort (x:xs) =
 
 howManyElementsDoesItTakeForTheSumOfTheRootsOfAllNaturalNumbersToExceedANumber :: (Floating a, Ord a, Enum a) => a -> Int
 howManyElementsDoesItTakeForTheSumOfTheRootsOfAllNaturalNumbersToExceedANumber x = (+) 1 $ length $ takeWhile (<x) $ scanl1 (+) $ map sqrt [1..]
+
+makeAllNegative :: (Num a) => [a] -> [a]
+makeAllNegative = map $ negate . abs
