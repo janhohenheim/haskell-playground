@@ -6,7 +6,7 @@ import Data.List
 import Data.Function
 import Data.Char
 import qualified Data.Map as Map
-import Geometry
+import Geometry.Cube
 
 someFunc :: IO ()
 someFunc = 
