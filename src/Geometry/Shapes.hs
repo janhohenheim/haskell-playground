@@ -1,4 +1,4 @@
-module Shapes 
+module Geometry.Shapes 
 ( Point(..)
 , Shape(..)
 , surface
