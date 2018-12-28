@@ -10,11 +10,20 @@ import qualified Geometry.Sphere as Sphere
 import qualified Geometry.Cuboid as Cuboid
 import qualified Geometry.Cube as Cube
 import Geometry.Shapes
+import Person
 
 someFunc :: IO ()
 someFunc = 
     let shape = Circle (Point 1 2) 3
-    in  putStrLn $ show $ shape
+    in  putStrLn $ show $ Person 
+        { firstName = "Jan Nils"
+        , lastName = "Ferner"
+        , age = 21
+        , height = 1.84
+        , phoneNumber = "012 345 67 89"
+        , flavor = "Strawberry"
+        }
+
 
 quicksort :: (Ord a) => [a] -> [a]
 quicksort [] = []
