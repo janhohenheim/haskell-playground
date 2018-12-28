@@ -9,14 +9,12 @@ import qualified Data.Map as Map
 import qualified Geometry.Sphere as Sphere
 import qualified Geometry.Cuboid as Cuboid
 import qualified Geometry.Cube as Cube
+import Geometry.Shape
 
 someFunc :: IO ()
 someFunc = 
-    let phoneMap = Map.fromList phoneNumbers
-        someNumber = case Map.lookup "betty" phoneMap of
-            Just number -> "The number is" ++ number
-            Nothing -> "No number found"
-    in  putStrLn $ show $ someNumber
+    let shape = Circle 1 2 3
+    in  putStrLn $ show $ shape
 
 quicksort :: (Ord a) => [a] -> [a]
 quicksort [] = []
