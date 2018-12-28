@@ -5,7 +5,7 @@ module Lib
 import Data.List
 import Data.Function
 import Data.Char
-
+import qualified Data.Map as Map
 
 someFunc :: IO ()
 someFunc = putStrLn $ show $ caesarEncode 4 "Hi there!"
