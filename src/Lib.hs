@@ -12,9 +12,10 @@ import qualified Geometry.Cube as Cube
 import Geometry.Shapes
 import Person
 import Day
+import Locker
 
 someFunc :: IO ()
-someFunc = putStrLn $ show $ ([minBound .. maxBound] :: [Day])
+someFunc = putStrLn $ show $ lockerLookup 100 lockers
 
 
 quicksort :: (Ord a) => [a] -> [a]
