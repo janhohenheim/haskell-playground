@@ -13,9 +13,10 @@ import Geometry.Shapes
 import Person
 import Day
 import Locker
+import OwnList
 
 someFunc :: IO ()
-someFunc = putStrLn $ show $ lockerLookup 100 lockers
+someFunc = putStrLn $ show $ someOwnList
 
 
 quicksort :: (Ord a) => [a] -> [a]
