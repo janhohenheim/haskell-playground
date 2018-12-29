@@ -45,7 +45,8 @@ caesarEncode shift msg =
         shifted = map (+ shift) ords
     in map chr shifted
 
-phoneNumbers :: [(String, String)]
+type PhoneBook = [(String, String)]
+phoneNumbers :: PhoneBook
 phoneNumbers = [("betty","555-2938"),("bonnie","452-2928"),("lucille","205-2928")]
 
 person :: Person
