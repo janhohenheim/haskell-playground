@@ -11,18 +11,10 @@ import qualified Geometry.Cuboid as Cuboid
 import qualified Geometry.Cube as Cube
 import Geometry.Shapes
 import Person
+import Day
 
 someFunc :: IO ()
-someFunc = 
-    let shape = Circle (Point 1 2) 3
-    in  putStrLn $ show $ Person 
-        { firstName = "Jan Nils"
-        , lastName = "Ferner"
-        , age = 21
-        , height = 1.84
-        , phoneNumber = "012 345 67 89"
-        , flavor = "Strawberry"
-        }
+someFunc = putStrLn $ show $ ([minBound .. maxBound] :: [Day])
 
 
 quicksort :: (Ord a) => [a] -> [a]
@@ -55,3 +47,14 @@ caesarEncode shift msg =
 
 phoneNumbers :: [(String, String)]
 phoneNumbers = [("betty","555-2938"),("bonnie","452-2928"),("lucille","205-2928")]
+
+person :: Person
+person = Person 
+    { firstName = "Jan Nils"
+    , lastName = "Ferner"
+    , age = 21
+    , height = 1.84
+    , phoneNumber = "012 345 67 89"
+    , flavor = "Strawberry"
+    }
+    
